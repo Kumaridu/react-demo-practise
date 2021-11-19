@@ -7,9 +7,7 @@ module.exports = (env, argv) => {
 
   return {
     context: path.resolve(__dirname, './src'),
-    entry: {
-      app: './App.js',
-    },
+    entry: path.join(__dirname, 'src', 'index.js'),
 
     output: {
       filename:
