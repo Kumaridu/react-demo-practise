@@ -29,7 +29,9 @@ module.exports = (env, argv) => {
       rules: [
         {
           test: /\.css$/i,
-          use: ['style-loader', 'css-loader'],
+          include: path.resolve(__dirname, 'src'),
+          exclude: /node_modules/,
+          use: ['style-loader', 'css-loader', 'postcss-loader'],
         },
         {
           test: /\.jsx?$/,

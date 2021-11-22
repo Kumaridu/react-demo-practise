@@ -11,7 +11,7 @@ function Record(props) {
       <td className="px-6 py-4 whitespace-nowrap text-sm">{props.author}</td>
       <td className="px-6 py-4 whitespace-nowrap text-sm">
         {props.paradigms.map((paradigm) => {
-          return <div>{paradigm}</div>;
+          return <div key={paradigm}>{paradigm}</div>;
         })}
       </td>
     </tr>
